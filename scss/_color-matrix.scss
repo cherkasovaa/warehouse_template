@@ -1,0 +1,29 @@
+@import './vars';
+
+$title: $scorpion;
+$card-seller-title: $patina;
+$pots: $bermuda;
+$shakers: $caper;
+$bowls: $wax-flower;
+$pots-text: $patina;
+$shakers-text: $mantis;
+$bowls-text: $atomic-targerine;
+$background-section: $bg-light;
+
+$color-collection-bg-arr: (
+  pot: $pots,
+  shaker: $shakers,
+  bowl: $bowls
+);
+
+$color-collection-text: (
+  pot: $pots-text,
+  shaker: $shakers-text,
+  bowl: $bowls-text
+);
+
+$color-logo-items: (
+  first: $wax-flower,
+  second: $bermuda,
+  third: $caper
+);

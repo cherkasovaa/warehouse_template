@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HW7</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="product product--pepper">
+        <div class="description-product description-product--pepper">
+          <p class="description-product__title">Exclusive pepper</p>
+          <p class="description-product__price">$45.50</p>
+        </div>
+        <div class="product__icon-wrapper product__icon-wrapper--pepper">
+          <div class="product__icon-pepper"></div>
+        </div>
+        <a href="#" class="product__photo-link">
+          <div class="product__photo-wrapper product__photo-wrapper--pepper"></div>
+        </a>
+        <div class="seller seller--pepper">
+          <div class="seller__photo-wrapper">
+            <a href="#" class="seller__photo-link">
+              <div class="seller__photo seller__photo--pepper"></div>
+            </a>
+          </div>
+          <p class="seller__title">By Materia &amp; Nendo</p>
+          <p class="seller__review">Good Things come in Paris</p>
+        </div>
+        <div class="menu">
+          <input class="menu__check-home" type="radio" name="home" id="home" />
+          <input
+            class="menu__check-brilliant"
+            type="radio"
+            name="home"
+            id="brilliant"
+          />
+          <input
+            class="menu__check-search"
+            type="radio"
+            name="home"
+            id="search"
+          />
+          <nav class="menu__wrapper">
+            <ul class="menu__link">
+              <li class="menu__item-home">
+                <label class="menu__toggle menu__toggle--home" for="home">
+                </label>
+              </li>
+              <li class="menu__item-brilliant">
+                <label
+                  class="menu__toggle menu__toggle--brilliant"
+                  for="brilliant"
+                ></label>
+              </li>
+              <li class="menu__item-search">
+                <label
+                  class="menu__toggle menu__toggle--search"
+                  for="search"
+                ></label>
+              </li>
+            </ul>
+          </nav>
+          <aside class="menu__content">
+            <div class="watehouse">
+              <h4 class="warehouse__title">Warehouse</h4>
+              <input class="menu__check-home" type="radio" name="home" id="home-hidden" />
+              <label class="menu__toggle menu__toggle--home-cross" for="home-hidden">
+                <span class="menu__toggle--home-wrapper"></span>
+              </label>
+              <ul class="warehouse__list">
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--bowls"></span>
+                  <a href="#" class="warehouse__link">Bowls</a>
+                </li>
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--pepers"></span>
+                  <a href="#" class="warehouse__link">Pepper</a>
+                </li>
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--bottles"></span>
+                  <a href="#" class="warehouse__link">Bottles</a>
+                </li>
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--knifes"></span>
+                  <a href="#" class="warehouse__link">Knifes</a>
+                </li>
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--cups"></span>
+                  <a href="#" class="warehouse__link">Cups</a>
+                </li>
+                <li class="warehouse__item">
+                  <span
+                    class="warehouse__icon warehouse__icon--grinders"
+                  ></span>
+                  <a href="#" class="warehouse__link">Grinders</a>
+                </li>
+                <li class="warehouse__item">
+                  <span class="warehouse__icon warehouse__icon--pots"></span>
+                  <a href="#" class="warehouse__link">Pots</a>
+                </li>
+              </ul>
+            </div>
+            <div class="room">
+              <h4 class="room__title">for rooms</h4>
+              <input class="menu__check-home" type="radio" name="home" id="room-hidden" />
+              <label class="menu__toggle menu__toggle--brilliant-cross" for="room-hidden">
+                <span class="menu__toggle--brilliant-wrapper"></span>
+              </label>
+              <ul class="room__list">
+                <li class="room__item">
+                  <span class="room__icon room__icon--kitchen"></span>
+                  <a href="#" class="room__link">Kitchen</a>
+                </li>
+                <li class="room__item">
+                  <span class="room__icon room__icon--bedroom"></span>
+                  <a href="#" class="room__link">Bedroom</a>
+                </li>
+                <li class="room__item">
+                  <span class="room__icon room__icon--bathroom"></span>
+                  <a href="#" class="room__link">Bathroom</a>
+                </li>
+                <li class="room__item">
+                  <span class="room__icon room__icon--living-room"></span>
+                  <a href="#" class="room__link">Living room</a>
+                </li>
+                <li class="room__item">
+                  <span class="room__icon room__icon--dining-room"></span>
+                  <a href="#" class="room__link">Dining room</a>
+                </li>
+                <li class="room__item">
+                  <span class="room__icon room__icon--balcony"></span>
+                  <a href="#" class="room__link">Balcony</a>
+                </li>
+              </ul>
+            </div>
+            <div class="search">
+              <h4 class="search__title">search</h4>
+              <input class="menu__check-home" type="radio" name="home" id="search-hidden" />
+              <label class="menu__toggle menu__toggle--search-cross" for="search-hidden">
+                <span class="menu__toggle--search-wrapper"></span>
+              </label>
+              <div class="search__box-wrapper">
+                <input class="search__box" type="search" name="search" id="search-box" placeholder="search"/>
+                <div class="search__icon-search"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </header>
+    <section class="product product--pot">
+      <div class="product-collection product-collection--pot">
+        <div class="product-collection__icon-wrapper">
+          <div
+            class="product-collection__icon product-collection__icon--pot"
+          ></div>
+        </div>
+        <p class="product-collection__title">Seven pots</p>
+        <p class="product-collection__text">collection</p>
+      </div>
+      <div class="description-product description-product--pot">
+        <p class="description-product__title">Kittle Thermo Pot</p>
+        <p class="description-product__price">$249.50</p>
+      </div>
+      <a href="#" class="product__photo-link">
+        <div class="product__photo-wrapper product__photo-wrapper--pot"></div>
+      </a>
+      <div class="seller seller--pot">
+        <div class="seller__photo-wrapper">
+          <a href="#" class="seller__photo-link">
+            <div class="seller__photo seller__photo--pot"></div>
+          </a>
+        </div>
+        <p class="seller__title">By james fernand</p>
+        <p class="seller__review">Tea O’clock</p>
+      </div>
+    </section>
+    <section class="rooms">
+      <div class="rooms__link-section">
+        <div class="rooms__link-icon-wrapper"></div>
+        <p class="rooms__title">rooms</p>
+      </div>
+    </section>
+    <section class="product product--shaker">
+      <div class="description-product description-product--shaker">
+        <p class="description-product__title">Special shaker</p>
+        <p class="description-product__price">$59.99</p>
+      </div>
+      <a href="#" class="product__photo-link">
+        <div class="product__photo-wrapper product__photo-wrapper--shaker"></div>
+      </a>
+      <div class="seller seller--shaker">
+        <div class="seller__photo-wrapper">
+          <a href="#" class="seller__photo-link">
+            <div class="seller__photo seller__photo--shaker"></div>
+          </a>
+        </div>
+        <p class="seller__title">By jack johnson</p>
+        <p class="seller__review">Ebony &amp; Ivory</p>
+      </div>
+      <div class="product-collection product-collection--shaker">
+        <div class="product-collection__icon-wrapper">
+          <div
+            class="product-collection__icon product-collection__icon--shaker"
+          ></div>
+          <p class="product-collection__title">Shakers</p>
+          <p class="product-collection__text">collection</p>
+        </div>
+      </div>
+    </section>
+    <section class="product product--bowl">
+      <div class="product-collection product-collection--bowl">
+        <div class="product-collection__icon-wrapper">
+          <div
+            class="product-collection__icon product-collection__icon--bowl"
+          ></div>
+        </div>
+        <p class="product-collection__title">Bowls</p>
+        <p class="product-collection__text">collection</p>
+      </div>
+      <div class="description-product description-product--bowl">
+        <p class="description-product__title">Generic bowl</p>
+        <p class="description-product__price">$177.50</p>
+      </div>
+      <a href="#" class="product__photo-link">
+        <div class="product__photo-wrapper product__photo-wrapper--bowl"></div>
+      </a>
+      <div class="seller seller--bowl">
+        <div class="seller__photo-wrapper">
+          <a href="#" class="seller__photo-link">
+            <div class="seller__photo seller__photo--bowl"></div>
+          </a>
+        </div>
+        <p class="seller__title">By Jenifer Flesson</p>
+        <p class="seller__review">Back to Basics</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__nav-wrapper">
+        <ul class="footer__menu">
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              <div class="footer__icon footer__icon--pepper"></div>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              <div class="footer__icon footer__icon--pot"></div>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              <div class="footer__icon footer__icon--shaker"></div>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              <div class="footer__icon footer__icon--bowl"></div>
+            </a>
+          </li>
+        </ul>
+        <div class="logo">
+          <div class="logo__icon">
+            <span class="logo__icon-box logo__icon-box--first"></span>
+            <div class="logo__icons-wrap">
+              <span class="logo__icon-box logo__icon-box--second"></span>
+              <span class="logo__icon-box logo__icon-box--third"></span>
+            </div>
+          </div>
+          <p class="logo__title">WareHouse</p>
+        </div>
+      </div>
+      <p class="footer__copyright">
+        2019 WARE HOUSE, USA based company. Image right belong to their
+        respective owners.
+      </p>
+    </footer>
+  </body>
+</html>

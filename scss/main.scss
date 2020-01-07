@@ -1,0 +1,785 @@
+@import './fonts';
+@import './vars';
+@import './mixin';
+@import './color-matrix';
+@import './reset';
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  &--pepper {
+    height: 665px;
+    padding-right: 40px;
+    justify-content: space-around;
+    background: $bg-grey;
+    padding-top: 136px;
+  }
+
+  &--pot,
+  &--shaker,
+  &--bowl {
+    justify-content: space-between;
+    height: 375px;
+    background: $background-section;
+    overflow: hidden;
+  }
+
+  &__icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 463px;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 236px solid #ffc2a6;
+  }
+
+  &__icon-pepper {
+    position: absolute;
+    top: -188px;
+    left: -15px;
+    background-image: url('../img/dishes_icons_sprite.png');
+    background-position-x: 120px;
+    width: 40px;
+    height: 66px;
+  }
+
+  &__photo-wrapper {
+    &--pepper {
+      background-image: url('../img/photo_dishes/pepper.png');
+
+      @include image-position(428, 428, 56, 60);
+    }
+
+    &--pot {
+      background-image: url('../img/photo_dishes/pot.png');
+
+      @include image-position(312, 311, -163, 109);
+    }
+
+    &--shaker {
+      background-image: url('../img/photo_dishes/shaker.png');
+
+      @include image-position(339, 443, -39, 103);
+    }
+
+    &--bowl {
+      background-image: url('../img/photo_dishes/bowls.png');
+
+      @include image-position(339, 311, -156, 161);
+    }
+  }
+}
+
+.description-product {
+  width: 250px;
+  flex-basis: 250px;
+
+  &--pepper {
+    transform: translate(174px, 73px);
+  }
+
+  &--pot,
+  &--bowl,
+  &--shaker {
+    position: relative;
+    top: 35px;
+    left: -73px;
+  }
+
+  &--bowl {
+    left: -64px;
+  }
+
+  &--shaker {
+    left: 40px;
+  }
+
+  &__title {
+    @include header-style(('SourceSansPro Light', sans-serif), $second-header-size, $title);
+
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    @include header-style(('SourceSansPro Bold', sans-serif), $second-header-size, $title);
+  }
+}
+
+.seller {
+  @include flex-direction;
+
+  width: 280px;
+  flex-basis: 280px;
+  position: relative;
+  top: 23px;
+  right: 210px;
+  text-align: center;
+
+  &__title {
+    @include header-style(('SourceSansPro Bold', sans-serif), $fourth-header-size, $card-seller-title);
+
+    margin-bottom: 27px;
+    text-transform: uppercase;
+  }
+
+  &__review {
+    @include header-style(('SourceSansPro Light', sans-serif), $first-header-size, $title);
+
+    line-height: 53px;
+    transform: translateX(9px);
+  }
+
+  &--pepper {
+    transform: translate(220px, -1px);
+
+    & .seller__review {
+      transform: translateX(-1px);
+    }
+  }
+
+  &--pot,
+  &--bowl {
+    transform: translate(140px, 72px);
+
+    & .seller__title {
+      margin-bottom: 21px;
+    }
+
+    & .seller__review {
+      transform: translateX(1px);
+    }
+  }
+
+  &--shaker {
+    transform: translate(244px, 72px);
+
+    & .seller__title {
+      margin-bottom: 21px;
+    }
+
+    & .seller__review {
+      transform: translateX(1px);
+    }
+  }
+
+  &__photo-wrapper {
+    margin-bottom: 10px;
+  }
+
+  &__photo {
+    background-image: url('../img/human_icons_sprite.png');
+    width: 68px;
+    height: 68px;
+
+    @include photo-sellers;
+  }
+}
+
+.product-collection {
+  @include product-collection(380px);
+  @include flex-direction;
+
+  padding: 95px 0;
+  text-transform: uppercase;
+
+  &__title {
+    @include header-style(('SourceSansPro', sans-serif), $third-header-size, inherit);
+
+    letter-spacing: -0.3px;
+  }
+
+  &__text {
+    @include header-style(('SourceSansPro Bold', sans-serif), $first-small-header-size, inherit);
+
+    letter-spacing: -0.3px;
+  }
+
+  &--pot {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: -378px;
+      background-repeat: repeat;
+      height: 11px;
+      transform: rotate(90deg);
+      background-size: 16px 20px;
+      background-image: radial-gradient(circle at 9px 14px, $bermuda 12px, transparent 13px);
+    }
+
+    & .product-collection__icon-wrapper {
+      transform: translateX(20px);
+    }
+
+    & .product-collection__title {
+      transform: translate(19px, 2px);
+    }
+
+    & .product-collection__text {
+      transform: translate(19px, 3px);
+    }
+  }
+
+  &--shaker {
+    flex-basis: 380px;
+    width: 380px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -380px;
+      bottom: 0;
+      right: 0;
+      background-repeat: repeat;
+      height: 11px;
+      transform: rotate(270deg);
+      background-size: 16px 20px;
+      background-image: radial-gradient(circle at 9px 14px, $shakers 12px, transparent 13px);
+    }
+  }
+
+  &--bowl {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: -378px;
+      background-repeat: repeat;
+      height: 11px;
+      transform: rotate(90deg);
+      background-size: 16px 20px;
+      background-image: radial-gradient(circle at 9px 14px, $bowls 12px, transparent 13px);
+    }
+
+    & .product-collection__title {
+      transform: translate(19px, 2px);
+    }
+
+    & .product-collection__text {
+      transform: translate(19px, 3px);
+    }
+  }
+
+  &__icon {
+    background-image: url('../img/dishes_icons_sprite_120.png');
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+
+    &--pot {
+      background-position: 0 0;
+
+      &:hover {
+        background-position: 0 120px;
+      }
+    }
+
+    &--shaker {
+      background-position: 120px 0;
+      transform: translateX(-16px);
+      margin-bottom: 17px;
+
+      & ~ .product-collection__text {
+        transform: translate(5px, 2px);
+      }
+
+      &:hover {
+        background-position: 120px 120px;
+      }
+    }
+
+    &--bowl {
+      background-position: 240px 0;
+      transform: translateX(24px);
+
+      &:hover {
+        background-position: 240px 119px;
+      }
+    }
+
+    &__icon-wrapper {
+      margin-bottom: 14px;
+      transform: translateX(-6px);
+    }
+  }
+}
+
+.rooms {
+  height: 375px;
+  background-image: url('../img/bg_kitchen.jpg');
+  display: flex;
+  align-items: center;
+
+  &__link-section {
+    @include flex-direction;
+
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    background: $mercuri;
+    border-radius: 50%;
+    position: relative;
+    left: 458px;
+  }
+
+  &__link-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/menu_icons_sprite.png');
+    background-position-x: 0;
+  }
+
+  &__title {
+    @include header-style(('SourceSansPro', sans-serif), $second-header-size, $title);
+
+    text-transform: uppercase;
+  }
+}
+
+.footer {
+  background: url('../img/bg_footer.jpg') no-repeat center center / cover;
+  width: 100%;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 40px 29px;
+
+  &__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  &__menu {
+    display: flex;
+    transform: translateY(10px);
+  }
+
+  &__item {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    background-image: url('../img/dishes_icons_sprite_90.png');
+    width: 90px;
+    height: 90px;
+
+    @include position-icons-footer;
+  }
+
+  &__copyright {
+    @include header-style(('SourceSansPro', sans-serif), $third-header-size, $silver);
+  }
+}
+
+.logo {
+  @include flex-direction;
+
+  width: 115px;
+  transform: translate(-53px, 19px);
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 9px;
+
+    &-box {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+
+      @each $box, $color-box in $color-logo-items {
+        &--#{$box} {
+          background: $color-box;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include header-style(('SourceSansPro', sans-serif), $third-header-size, $silver);
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.warehouse {
+  transform: translateX(-3px);
+
+  &__list {
+    transform: translateX(-24px);
+  }
+
+  &__title {
+    transform: translateX(-15px);
+  }
+}
+
+.search {
+  &__title {
+    transform: translateX(-14px);
+  }
+
+  &__box {
+    border: none;
+    outline: none;
+    width: 232px;
+    padding: 13px 41px 13px 10px;
+
+    &[placeholder] {
+      @include header-style(('SourceSansPro', sans-serif), $first-small-header-size, $grey);
+
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+    }
+
+    &[placeholder]:active,
+    &[placeholder]:focus {
+      @include header-style(('SourceSansPro Bold', sans-serif), $first-small-header-size, $title);
+    }
+  }
+
+  &__box-wrapper {
+    position: relative;
+    transform: translate(-29px, 23px);
+  }
+
+  &__icon-search {
+    position: absolute;
+    top: 2px;
+    right: -123px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 56px;
+      background: $patina;
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 56px;
+      background-image: url('../img/menu_icons_sprite.png');
+      background-position-x: 80px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.warehouse,
+.room,
+.search {
+  transform: translateX(-20px);
+
+  &__title {
+    @include header-style(('SourceSansPro', sans-serif), $fourth-header-size, $white);
+
+    text-align: center;
+    padding-top: 34px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 0.3px;
+    transform: translateX(-23px);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 239px;
+    transform: translateX(-13px);
+    text-align: center;
+  }
+
+  &__item {
+    @include flex-direction;
+
+    width: 70px;
+    margin-right: 48px;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: inline-block;
+    background-image: url('../img/dishes_icons_sprite.png');
+    width: 70px;
+    height: 70px;
+
+    @include icon-position;
+  }
+
+  &__link {
+    @include header-style(('SourceSansPro', sans-serif), $fourth-header-size, $white);
+    @include link-style($white, $white, $white);
+  }
+}
+
+.room {
+  &__title {
+    transform: translateX(-21px);
+  }
+
+  &__list {
+    transform: translateX(-24px);
+  }
+
+  &__item {
+    width: 94px;
+    margin-right: 25px;
+  }
+
+  &__icon {
+    @include icon-position-rooms;
+  }
+}
+
+%cross-position {
+  background-position-x: 40px;
+  position: absolute;
+  top: 27px;
+  right: -45px;
+}
+
+%hidden-cross {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: -380px;
+}
+
+.menu {
+  position: relative;
+  top: -64px;
+  right: -53px;
+
+  &__item {
+    &-home,
+    &-brilliant,
+    &-search {
+      position: relative;
+      padding: 16px 20px;
+    }
+  }
+
+  &__wrapper {
+    display: inline-block;
+    transform: translate(21px, -16px);
+  }
+
+  &__content {
+    height: 665px;
+    width: 378px;
+    background-color: $dark-blue;
+    background-image: url("../img/bg_menu.jpg");
+    position: relative;
+    top: -300px;
+    right: -106px;
+    padding: 0 83px;
+    display: none;
+
+    & .watehouse,
+    & .room,
+    & .search {
+      display: none;
+    }
+
+    &--search {
+      padding: 0 67px;
+    }
+  }
+
+  &__toggle {
+    background-image: url('../img/menu_icons_sprite.png');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+
+    &--home {
+      background-position-x: 120px;
+
+      &-cross {
+        @extend %cross-position;
+      }
+
+      &-wrapper {
+        @extend %hidden-cross;
+
+        top: 31px;
+      }
+    }
+
+    &--brilliant {
+      background-position-x: 0;
+
+      &-cross {
+        @extend %cross-position;
+      }
+
+      &-wrapper {
+        @extend %hidden-cross;
+
+        top: 107px;
+      }
+    }
+
+    &--search {
+      background-position-x: 80px;
+
+      &-cross {
+        @extend %cross-position;
+      }
+
+      &-wrapper {
+        @extend %hidden-cross;
+
+        top: 183px;
+      }
+    }
+  }
+
+  &__check {
+    &-home,
+    &-brilliant,
+    &-search {
+      display: none;
+    }
+
+    &-home:checked ~ .menu__content,
+    &-brilliant:checked ~ .menu__content,
+    &-search:checked ~ .menu__content {
+      display: block;
+      animation-name: menu;
+      animation-duration: 0.6s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    &-home:checked ~ .menu__content .watehouse,
+    &-brilliant:checked ~ .menu__content .room,
+    &-search:checked ~ .menu__content .search {
+      display: block;
+      transform: translate(5px, -2px);
+    }
+
+    &-home:checked + .menu__toggle--home,
+    &-brilliant:checked + .menu__toggle--brilliant,
+    &-search:checked + .menu__toggle--search {
+      transform: translateX(-36px);
+      transition: 0.5s;
+    }
+
+    &-home:checked ~ .menu__wrapper,
+    &-brilliant:checked ~ .menu__wrapper,
+    &-search:checked ~ .menu__wrapper {
+      transform: translate(-76px, -16px);
+    }
+
+    &-home:checked ~ .menu__wrapper .menu__link .menu__toggle--home::before,
+    &-brilliant:checked ~ .menu__wrapper .menu__link .menu__toggle--brilliant::before,
+    &-search:checked ~ .menu__wrapper .menu__link .menu__toggle--search::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75px;
+      height: 75px;
+      background: $bermuda;
+    }
+
+    &-home:checked ~ .menu__wrapper .menu__link .menu__toggle--home::after,
+    &-brilliant:checked ~ .menu__wrapper .menu__link .menu__toggle--brilliant::after,
+    &-search:checked ~ .menu__wrapper .menu__link .menu__toggle--search::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background-image: url('../img/menu_icons_sprite.png');
+    }
+
+    &-home:checked ~ .menu__wrapper .menu__link .menu__toggle--home::after {
+      background-position-x: 120px;
+    }
+
+    &-brilliant:checked ~ .menu__wrapper .menu__link .menu__toggle--brilliant::after {
+      background-position-x: 0;
+    }
+
+    &-search:checked ~ .menu__wrapper .menu__link .menu__toggle--search::after {
+      background-position-x: 80px;
+    }
+  }
+}
+
+@keyframes menu {
+  0% {
+    top: -300px;
+    right: -200px;
+  }
+
+  20% {
+    top: -300px;
+    right: -150px;
+  }
+
+  40% {
+    top: -300px;
+    right: -100px;
+  }
+
+  60% {
+    top: -300px;
+    right: -50px;
+  }
+
+  80% {
+    top: -300px;
+    right: -25px;
+  }
+
+  100% {
+    display: block;
+    top: -300px;
+    right: 0;
+  }
+}

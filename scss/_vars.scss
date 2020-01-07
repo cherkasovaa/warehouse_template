@@ -1,0 +1,66 @@
+// Colors
+$bg-grey: #e9eae2;
+$bg-light: #fcfcfc;
+
+$white: #fff;
+$soft-peach: #f7f1f1;
+$alabaster: #fcfcfc;
+$mercuri: #e1e1e1;
+$silver: #c5c1c1;
+$alto: #d8d8d8;
+$caper: #bfe79e;
+$gossip: #c3f19d;
+$mantis: #85ba59;
+$reptide: #87ebdd;
+$patina: #578b84;
+$tradewind: #66b5aa;
+$bermuda: #7dd5c9;
+$pine-glade: #a9cc8c;
+$scorpion: #5a5a5a;
+$tundora: #474747;
+$grey: #929292;
+$dark-blue: #142038e6;
+$wax-flower: #ffc2a6;
+$orange: #ff7130;
+$atomic-targerine: #ff915e;
+
+//Fonts
+$first-header-size: 50px;
+$second-header-size: 28px;
+$third-header-size: 24px;
+$fourth-header-size: 18px;
+$fifth-header-size: 16px;
+$first-small-header-size: 14px;
+
+$position-arr: (
+  pots: 0,
+  bowls: 70px,
+  pepers: 140px,
+  grinders: 210px,
+  cups: 280px,
+  knifes: 350px,
+  bottles: 420px
+);
+
+$position-arr-rooms: (
+  kitchen: 70px,
+  bedroom: 140px,
+  balcony: 210px,
+  dining-room: 280px,
+  living-room: 350px,
+  bathroom: 420px
+);
+
+$position-arr-photo: (
+  bowl: 0,
+  pepper: 68px,
+  pot: 136px,
+  shaker: 204px
+);
+
+$position-arr-icon-footer: (
+  pot: 0,
+  shaker: 90px,
+  bowl: 180px,
+  pepper: 270px
+);

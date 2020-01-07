@@ -1,0 +1,87 @@
+@import './vars';
+@import './color-matrix';
+
+@mixin header-style($font-family, $font-size, $font-color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+}
+
+@mixin product-collection($p-width) {
+  width: $p-width;
+
+  @each $product, $color-product in $color-collection-bg-arr {
+    &--#{$product} {
+      background: $color-product;
+    }
+  }
+
+  @each $product, $color-product in $color-collection-text {
+    &--#{$product} {
+      color: $color-product;
+    }
+  }
+}
+
+@mixin image-position($width, $height, $x, $y) {
+  background-position-x: center;
+  background-repeat: no-repeat;
+  width: $width + px;
+  height: $height + px;
+  transform: translate($x + px, $y + px);
+}
+
+@mixin flex-direction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin icon-position {
+  @each $item, $value in $position-arr {
+    &--#{$item} {
+      background-position-x: $value;
+    }
+  }
+}
+
+@mixin link-style($hover, $active, $visited) {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &:visited {
+    color: $visited;
+  }
+}
+
+@mixin icon-position-rooms {
+  @each $item, $value in $position-arr-rooms {
+    &--#{$item} {
+      background-position-x: $value;
+    }
+  }
+}
+
+@mixin photo-sellers {
+  @each $item, $value in $position-arr-photo {
+    &--#{$item} {
+      background-position-x: $value;
+    }
+  }
+}
+
+@mixin position-icons-footer {
+  @each $item, $value in $position-arr-icon-footer {
+    &--#{$item} {
+      background-position-x: $value;
+    }
+  }
+}
