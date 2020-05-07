@@ -4,3 +4,5 @@ Used technologies:
 - SCSS
 - Flexbox
 - BEM
+
+No responsive
